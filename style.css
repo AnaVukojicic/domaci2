@@ -1,0 +1,14 @@
+#tableMovies{
+    font-size: 19px;
+}
+
+tbody input{
+    margin-right: 7px;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+label{
+    cursor: pointer;
+}

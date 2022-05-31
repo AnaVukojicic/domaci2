@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="container mt-5">
+        <div class="row">
+            <button class="btn btn-info col-3 offset-9" data-bs-toggle="modal" data-bs-target="#modalDiv">Dodaj novi film</button>
+        </div>
+
+        <div class="row">
+            <div class="modal fade" id="modalDiv" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Informacije o filmu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Da li ste odgledali film:
+                        <label for="noviFilmOdgledanDA"><input class="noviFilmInputRadio" type="radio" id="noviFilmOdgledanDA" name="odgledan">DA</label>
+                        <label for="noviFilmOdgledanNE"><input class="noviFilmInputRadio" type="radio" id="noviFilmOdgledanNE" name="odgledan" checked="true">NE</label>
+                    </div>
+                    <div class="modal-body">
+                        Naziv filma:
+                        <input type="text" id="noviFilmNaziv" class="noviFilmInput form-control">
+                    </div>
+                    <div class="modal-body">
+                        Godina:
+                        <input type="number" id="noviFilmGodina" class="noviFilmInput form-control" min="1930" max="2021">
+                    </div>
+                    <div class="modal-body">
+                        Drzava:
+                        <input type="text" id="noviFilmDrzava" class="noviFilmInput form-control">
+                    </div>
+                    <div class="modal-body">
+                        Napomena:
+                        <input type="text" id="noviFilmNapomena" class="noviFilmInput form-control">
+                    </div>
+                    <div class="modal-body">
+                        Glumci:
+                        <input type="text" id="noviFilmGlumci" class="noviFilmInput form-control" placeholder="Unesite makar jednog glumca...">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
+                        <button type="button" class="btn btn-info" id="dodajFilmDugme">Dodaj film</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <table class="table" id="tableMovies">
+                    <thead class="table-dark">
+                        <th>Odgledan</th>
+                        <th>Naziv</th>
+                        <th>Godina</th>
+                        <th>Drzava</th>
+                        <th>Napomena</th>
+                        <th>Glumci</th>
+                    </thead>
+                    <tbody id="moviesTableBody">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
